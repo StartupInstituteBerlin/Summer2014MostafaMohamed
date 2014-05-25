@@ -51,4 +51,4 @@ test:
 #
 production:
   <<: *default
-  database: db/production.postgresql
+  database: db/production.pg
