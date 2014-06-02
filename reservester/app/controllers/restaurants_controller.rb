@@ -1,6 +1,13 @@
 class RestaurantsController < ApplicationController
+before_action :authenticate_user!, only: [:create, :edit, :update]
+
 def index
-    @restaurants = Restaurant.all
+    
+    if current_user
+       @restaurants = current_user.restaurants
+     else
+       @restaurants = Restaurant.all
+    end
   end
 
   def show
@@ -44,6 +51,7 @@ def index
   private
 
   def restaurant_params
-    params.require(:restaurant).permit(:name, :description, :phone, :address, :photo)
+    #params.require(:restaurant).permit(:name, :description, :phone, :address, :photo)
+    params.require(:restaurant).permit(:name, :user_id, :photo, :address, :description)
   end
 end
