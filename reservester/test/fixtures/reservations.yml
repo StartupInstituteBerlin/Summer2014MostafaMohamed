@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  email: MyString
+  date: 2014-06-02 11:26:05
+  message: MyText
+  restaurant_id: 1
+
+two:
+  email: MyString
+  date: 2014-06-02 11:26:05
+  message: MyText
+  restaurant_id: 1

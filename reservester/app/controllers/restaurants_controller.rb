@@ -11,7 +11,11 @@ def index
   end
 
   def show
+    
     @restaurant = Restaurant.find params[:id]
+    @reservation = Reservation.new(restaurant_id: @restaurant.id) 
+
+
   end
 
   def new

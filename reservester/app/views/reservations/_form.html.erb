@@ -1,0 +1,21 @@
+<%= form_for(@reservation) do |f| %>
+
+  <%= f.label :email %>
+  <%= f.text_field :email %>
+  <br />
+
+  <%= f.label :date%>
+  <%= f.datetime_select :date %>
+  <br />
+
+  <%= f.label :message %>
+  <%= f.text_area :message %>
+  <br />
+
+  <%= f.hidden_field :restaurant_id %>
+
+
+  <%= f.submit class: 'btn btn-primary' %>
+<% end %>
+
+

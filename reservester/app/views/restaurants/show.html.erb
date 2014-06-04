@@ -1,6 +1,7 @@
 <h1><%= @restaurant.name %></h1>
 
-<img src="<%= @restaurant.photo.masthead.url %>" />
+
+<%= image_tag(@restaurant.photo.masthead) %>
 
 <p><%= @restaurant.description %></p>
 
@@ -8,6 +9,8 @@
   <dt>Phone</dt><dd><%= @restaurant.phone %>
   <dt>Address</dt><dd><%= @restaurant.address %>
 </dl>
+
+<%= render 'reservations/form' %>
 
 <ul>
   <li><%= link_to 'Edit', edit_restaurant_path(@restaurant) %></li>
